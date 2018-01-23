@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="Copyright" content="贷款">
+  <title>贷款</title>
+  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+  <script src="./src/js/jquery-3.3.1.min.js"></script>
+  <script src="./src/js/rem.js"></script>
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="./src/css/master.css">
+  <link rel="stylesheet" href="./src/css/common.css">
+  <!-- 自定义 css + js -->
+  <link rel="stylesheet" href="./src/css/apply.css">
+</head>
+<body id="body">
+  
+  <script type="text/javascript">
+    $(function(){
+
+      // 设置复选框
+      $('.explain').on('click',function(){
+        var ckVal=$("#ckbox").attr('class');
+        if(ckVal=='chs_1'){
+          $("#ckbox").attr('class','chs_0');
+        }else{
+          $("#ckbox").attr('class','chs_1');
+        }
+      })
+
+      // 提交
+      $('.apply-btn').on('click',function(){
+        var ckVal=$("#ckbox").attr('class');
+        if(ckVal=='chs_1'){
+          console.log('提交');
+        }else{
+          console.log('还未同意协议');
+        }
+      });
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="Copyright" content="贷款">
+  <title>贷款</title>
+  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+  <script src="./src/js/jquery-3.3.1.min.js"></script>
+  <script src="./src/js/rem.js"></script>
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="./src/css/master.css">
+  <link rel="stylesheet" href="./src/css/common.css">
+  <!-- 自定义 css + js -->
+  <link rel="stylesheet" href="./src/css/apply.css">
+</head>
+<body id="body">
+  <!-- 标题 -->
+  <div class="head">
+    <div class="back"></div>
+    <div class="head-txt">立即申请</div>
+    <div class="right"></div>
+  </div>
+
+  <div class="list-tit">
+    <span>
+      基本信息
+    </span>
+  </div>
+  <div class="list-content">
+    <span>
+      <p>姓</p><p>名：</p>
+    </span>
+    <input type="text" name="" placeholder="请输入姓名" value="">
+  </div>
+  <div class="list-content">
+    <span>
+      <p>身</p><p>份</p><p>证：</p>
+    </span>
+    <input type="text" name="" placeholder="请输入身份证号码" value="">
+  </div>
+  <div class="list-tit">
+    <span>
+      贷款意向
+    </span>
+  </div>
+  <div class="list-content">
+    <span>
+      <p>贷</p><p>款</p><p>金</p><p>额：</p>
+    </span>
+    <input type="text" name="" placeholder="" value="">
+  </div>
+  <div class="list-content">
+    <span >
+      <p>贷</p><p>款</p><p>期</p><p>限：</p>
+    </span>
+    <select>
+      <option value ="volvo">1年</option>
+      <option value ="volvo">5年</option>
+      <option value ="volvo">10年</option>
+      <option value ="volvo">25年</option>
+    </select>
+  </div>
+  <div class="list-content">
+    <span>
+      <p>贷</p><p>款</p><p>目</p><p>的：</p>
+    </span>
+    <select>
+      <option value ="volvo">吃</option>
+      <option value ="saab">喝</option>
+      <option value="opel">嫖</option>
+      <option value="audi">赌</option>
+    </select>
+  </div>
+  <div class="list-tit">
+    <span>
+      短息验证
+    </span>
+  </div>
+  <div class="list-content">
+    <span>
+      <p>手</p><p>机</p><p>号</p><p>码：</p>
+    </span>
+    <input type="text" name="" placeholder="" value="">
+  </div>
+  <div class="list-vali">
+    <span class="valicode-tit">
+      <p>验</p><p>证</p><p>码：</p>
+    </span>
+    <input type="text" class="valicode-input" name="" placeholder="" value="">
+    <span class="valicode-i">|</span>
+    <span class="valicode-btn">发送验证码</span>
+  </div>
+  <div class="explain">
+    <span id='ckbox' class="chs_1"></span>
+    <span>我已仔细阅读并同意</span>
+    <a href="#">《贷款咨询与服务协议》</a>
+  </div>
+  <div class="apply-btn">
+    立即提交
+  </div>
+  <script type="text/javascript">
+    $(function(){
+
+      // 设置复选框
+      $('.explain').on('click',function(){
+        var ckVal=$("#ckbox").attr('class');
+        if(ckVal=='chs_1'){
+          $("#ckbox").attr('class','chs_0');
+        }else{
+          $("#ckbox").attr('class','chs_1');
+        }
+      })
+
+      var countdown=60;
+      var isClick=true;
+      $('.valicode-btn').on('click',function(){
+        console.log(this);
+        var self=this;
+        if(isClick){
+          isClick=false;
+          console.log(isClick);
+          settime(self);
+        }
+      });
+
+      function settime() {
+        console.log(11);
+        if (countdown == 0) { // 倒计时结束
+          $(".valicode-btn").css({color:"#7aadf8"})
+          $('.valicode-btn').html('发送验证码');
+          countdown = 60;
+          isClick=true;
+          return;
+        } else { // 倒计时
+          $(".valicode-btn").css({color:"#a3aaae"})
+          $('.valicode-btn').html(countdown+'秒后重发');
+          countdown--;
+        }
+        setTimeout(function() {
+          settime()
+        },1000);
+      }
+
+      // 提交
+      $('.apply-btn').on('click',function(){
+        var ckVal=$("#ckbox").attr('class');
+        if(ckVal=='chs_1'){
+          console.log('提交');
+        }else{
+          console.log('还未同意协议');
+        }
+      });
+
+    })
+  </script>
+</body>
+</html>

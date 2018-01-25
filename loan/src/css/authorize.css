@@ -1,0 +1,93 @@
+.clear{
+    clear: both;
+}
+
+.pic {
+    width: 100%;
+    height: 2.99rem;
+    background: url("../img/ser-logo.png") no-repeat center center;
+    background-size: 7.5rem 2.99rem;
+    border-bottom: 1px solid #e6e9ea;
+}
+
+.main-text{
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  margin-top: .3rem;
+}
+.txt-list{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+}
+.txt-list span{
+  display: block;
+}
+
+.dian{
+  width: .40rem;
+  height: .40rem;
+  background: url("../img/circle.png") no-repeat center center;
+  background-size: .08rem .08rem;
+}
+.list-txt{
+  font-size: .28rem;
+  color: #bfc7cc;
+  line-height: .45rem;
+}
+
+.explain{
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    color: #333b46;
+    font-size: .3rem;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+.explain span{
+    height: .8rem;
+    line-height: .8rem;
+    display: inline-block;
+}
+.chs_0{
+    width: .4rem;
+    height: .4rem;
+    margin:  0 .05rem 0 .2rem;
+    display: inline-block;
+    background: url(../img/chs_0.png) no-repeat center center;
+    background-size: .4rem .4rem;
+}
+.chs_1{
+    width: .4rem;
+    height: .4rem;
+    margin:  0 .05rem 0 .2rem;
+    display: inline-block;
+    background: url(../img/chs_1.png) no-repeat center center;
+    background-size: .4rem .4rem;
+}
+.explain a{
+    height: .8rem;
+    line-height: .8rem;
+    display: inline-block;
+    color: #7aadf8;
+}
+.apply-btn{
+    width: 100%;
+    height: .9rem;
+    background-color: #7aadf8;
+    text-align: center;
+    line-height: .9rem;
+    color: #fefeff;
+}

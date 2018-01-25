@@ -15,33 +15,205 @@
   <link rel="stylesheet" href="./src/css/master.css">
   <link rel="stylesheet" href="./src/css/common.css">
   <!-- 自定义 css + js -->
-  <link rel="stylesheet" href="./src/css/apply.css">
+  <link rel="stylesheet" href="./src/css/index.css">
 </head>
 <body id="body">
-  
+  <!-- 标题 -->
+  <div class="head">
+    <div class="back"></div>
+    <div class="head-txt">我要借钱</div>
+    <div class="right"></div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-addr">
+      <span class="addr-i"></span>
+      <span class="bar-txt">深圳 彩悦大厦</span>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="menu-li">
+      <div class="li-img usr"></div>
+      <div class="li-txt">
+        我的借款
+      </div>
+    </div>
+    <div class="menu-li">
+      <div class="li-img mn"></div>
+      <div class="li-txt">
+        借款攻略
+      </div>
+    </div>
+    <div class="menu-li">
+      <div class="li-img medal"></div>
+      <div class="li-txt">
+        财富优势
+      </div>
+    </div>
+  </div>
+
+  <div class="my-lines">
+    <div class="line-tit">
+      <span>
+        我的额度
+      </span>
+      <span class="clblue">
+          提升额度
+      </span>
+    </div>
+    <div class="dynamic-lines">
+      <div class="dyic">
+        <div class="clc90 rotat30"></div>
+        <div class="clc90 rotat90"></div>
+        <div class="clc90 rotat180"></div>
+        <div class="dyic-txt">
+          <div class="dyic-txt-top ">
+            当前可借额度
+          </div>
+          <div class="dyic-txt-btm linesLeft">
+            30,000元
+          </div>
+        </div>
+      </div>
+      <div class="dyic ">
+        <div class="clc90 rotat30"></div>
+        <div class="clc90 rotat90"></div>
+        <div class="clc90 rotat180"></div>
+        <div class="dyic-txt">
+          <div class="dyic-txt-top ">
+            最高可借额度
+          </div>
+          <div class="dyic-txt-btm linesRight">
+            300,000元
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hot-loan"></div>
+
+  <div class="list">
+    <div class="list-tit">
+      <span class="list-tit-txt">
+        易花借
+      </span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+    </div>
+    <div class="list-content">
+      <div class="list-left">
+        <div class="list-left-num">
+          20,000
+        </div>
+        <div class="list-left-txt">
+          评估额度(元)
+        </div>
+      </div>
+      <div class="list-right">
+        <div class="list-right-l">
+          <div class="list-right-l-tit">
+            最高15万元，月利率低至0.69%
+          </div>
+          <div class="list-right-l-span">
+            <span>额度大</span>
+            <span>利息低</span>
+            <span>放款快</span>
+          </div>
+        </div>
+        <div class="list-right-r">
+          <span>
+              立即申请
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list magtp">
+    <div class="list-tit">
+      <span class="list-tit-txt">
+        易花借
+      </span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+      <span class="list-tit-star"></span>
+    </div>
+    <div class="list-content">
+      <div class="list-left">
+        <div class="list-left-num">
+          20,000
+        </div>
+        <div class="list-left-txt">
+          评估额度(元)
+        </div>
+      </div>
+      <div class="list-right">
+        <div class="list-right-l">
+          <div class="list-right-l-tit">
+            最高15万元，月利率低至0.69%
+          </div>
+          <div class="list-right-l-span">
+            <span>额度大</span>
+            <span>利息低</span>
+            <span>放款快</span>
+          </div>
+        </div>
+        <div class="list-right-r">
+          <span>
+              立即申请
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript">
     $(function(){
 
-      // 设置复选框
-      $('.explain').on('click',function(){
-        var ckVal=$("#ckbox").attr('class');
-        if(ckVal=='chs_1'){
-          $("#ckbox").attr('class','chs_0');
-        }else{
-          $("#ckbox").attr('class','chs_1');
-        }
-      })
+      // 弧线
+      function addRotate(div,rot,max){
 
-      // 提交
-      $('.apply-btn').on('click',function(){
-        var ckVal=$("#ckbox").attr('class');
-        if(ckVal=='chs_1'){
-          console.log('提交');
-        }else{
-          console.log('还未同意协议');
+        if(rot>=max){
+          return;
         }
-      });
+        rot=rot+2;
+        div.css({"transform":"rotate("+rot+"deg)"})
+        div.css({"-webkit-transform":"rotate("+rot+"deg)"})
+        setTimeout(function() {
+          addRotate(div,rot,max)
+        },10);
 
+      }
+      var rotat30=$(".rotat30");
+      addRotate(rotat30,-120,-20);
+      var rotat30=$(".rotat90");
+      addRotate(rotat30,-120,60);
+      var rotat30=$(".rotat180");
+      addRotate(rotat30,-120,150);
+
+      // 数字
+      function addNum(div,start,end,space,str,fw){
+        if(start>=end){
+          return;
+        }
+        start=start+space;
+        div.html(start+str);
+        setTimeout(function() {
+          addNum(div,start,end,space,str,fw)
+        },fw);
+
+      }
+      var linesLeft =$(".linesLeft");
+      addNum(linesLeft,1,30,1,',000',50)
+      var linesRight=$(".linesRight");
+      addNum(linesRight,100,300,5,',000',30)
     })
   </script>
 </body>

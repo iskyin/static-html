@@ -1,0 +1,145 @@
+.list-tit{
+    width: 100%;
+    height: .8rem;
+    color: #a3aaae;
+    line-height: .9rem;
+    border-bottom: 1px solid #e6e9ea;
+}
+.list-tit span{
+    margin: 0 0 0 .25rem;
+}
+.list-content{
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e9ea;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+.list-content span{
+    display: inline-block;
+    width: 1.6rem;
+    height: .88rem;
+    margin-left: .25rem;
+    color: #333b46;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    text-align: justify;
+}
+.list-content_input{
+    width: 5rem;
+    height: .88rem;
+    border: none;
+    color: #333b46;
+}
+input:-moz-placeholder { color: #bfc7cc; }
+::-webkit-input-placeholder { color:#bfc7cc; }
+
+.ck-style{
+  width: 4rem;
+  height: .88rem;
+  margin-left: .8rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.lj_ck{
+  width: .4rem;
+  height: .4rem;
+  background: url("../img/ck_1.png") no-repeat center center;
+  background-size: .32rem .32rem;
+}
+.lj_ck:checked{
+    background: url("../img/ck_2.png") no-repeat center center;
+    background-size: .32rem .32rem;
+}
+
+.ck_chk{
+  width: 1.8rem;
+  height: .88rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: center;
+  -webkit-align-items:center;
+}
+.ck_chk input{
+  display: inline-block;
+}
+.ck_chk span{
+  display: inline-block;
+}
+.apply-btn{
+    width: 100%;
+    height: .9rem;
+    background-color: #7aadf8;
+    text-align: center;
+    line-height: .9rem;
+    color: #fefeff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: .32rem;
+}
+
+.sec-menu{
+    width:100%;
+    height: 100%;
+    background: rgba(127,127,127,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec-list{
+    width:2.4rem;
+    height: 2.4rem;
+    background: url("../img/rise-circle.png") no-repeat;
+    background-size: contain;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.toplist1{
+      margin-top: 2rem;
+}
+.toplist2{
+      margin-top: 1.4rem;
+}
+.sec-list-tit{
+  color: #333b46;
+  font-size: .2rem;
+}
+.sec-list-num{
+  color: #333b46;
+  font-size: .32rem;
+}
+.sec-menu-btn{
+  width: 3.64rem;
+  height: .9rem;
+  margin-top: 2rem;
+  color: #fefeff;
+  font-size: .32rem;
+  text-align: center;
+  line-height: .9rem;
+  background-color: #7aadf8;
+  border-radius: .1rem;
+}
+.list-input{
+  margin-left: .3rem;
+}

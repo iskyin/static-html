@@ -1,0 +1,119 @@
+.clear{
+    clear: both;
+}
+.content{
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 0.2rem;
+    border-top: 1px solid #e6e9ea;
+    border-bottom: 1px solid #e6e9ea;
+}
+
+.content-title{
+  height: .88rem;
+  font-size: .32rem;
+  color: #333b46;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+.title-left{
+  width: 4rem;
+  height: .88rem;
+  margin-left: .3rem;
+  line-height: .88rem;
+}
+
+.title-right{
+  width: .9rem;
+  height: .88rem;
+  text-align: center;
+  line-height: .88rem;
+}
+
+.content-list{
+  height: 2.06rem;
+}
+
+.list-title{
+  width:7.2rem;
+  margin: 0 0 0 .3rem;
+  height: .8rem;
+  border-bottom: 1px solid #e6e9ea;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+
+}
+.list-title-name{
+  font-size: .28rem;
+  color: #333b46;
+}
+.list-title-status{
+  width: 1.2rem;
+  text-align: center;
+  font-size: .24rem;
+
+}
+.color-red{
+  color: #ff4848;
+}
+.color-blue{
+  color: #7caff5;
+}
+.color-green{
+  color: #83dd5c;
+}
+.list-content{
+  width:7.1rem;
+  margin: 0 0 0 .4rem;
+  height: 1.26rem;
+  display: flex;
+  display: -webkit-flex;
+}
+.list-div{
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  height: 1.26rem;
+}
+.list-div-tit{
+  height: .6rem;
+  line-height: .7rem;
+  font-size: .28rem;
+  color: #bfc7cc;
+}
+.changeHeight{
+  height: .56rem;
+}
+.list-div-mn{
+  font-size: .36rem;
+  color: #ff7b2c;
+}
+.list-div-mth{
+  font-size: .36rem;
+  color: #333b46;
+}
+.list-div-time{
+  font-size: .26rem;
+  color: #333b46;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+   -webkit-flex-direction: column;
+}
+.list-div-time span{
+  display: inline-block;
+  width: 100%;
+  height: .26rem;
+}

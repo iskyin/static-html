@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            #yibiao {
+                width: 400px;
+                height: 200px;
+                background: white;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .yuan1 {
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 50%;
+                background: black;
+                opacity: 0.2;
+            }
+
+            .yuan2 {
+                width: 360px;
+                height: 360px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                border-radius: 50%;
+                background: white;
+            }
+
+            .clip {
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 50%;
+                background: blue;
+                clip: rect(200px, 400px, 400px, 0px);
+                transform: rotate(0deg);
+            }
+
+            .num {
+                position: absolute;
+                width: 100%;
+                height: 100px;
+                top: 100px;
+                text-align: center;
+                font-size: 100px;
+            }
+        </style>
+        <script src="./src/js/jquery-3.3.1.min.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                //默认数字0--10000，默认数字自增步长100
+                var buchang = 200;
+                var deg = 180 * buchang / 10000; //每个步长代表的度数
+                var degs = parseInt($(".num").text()) / buchang * deg; //先计算有几个步长,算出半圆要转的度数
+                var du = 0; //起始度数
+                var bu = 0; //数字自增步长
+                function zhuan() {
+
+                    $(".clip").css("transform", "rotate(" + du + "deg)");
+                    $(".num").text(bu);
+                    du += deg;
+
+
+                    bu += buchang;
+                    if(du >= degs) {
+                         clearInterval(setin);
+                    }
+
+                }
+                var setin = setInterval(zhuan, 30)
+
+            })
+        </script>
+    </head>
+
+    <body>
+        <div id="yibiao">
+            <div class="yuan1"></div>
+            <div class="clip"></div>
+            <div class="yuan2"></div>
+            <div class="num">5000</div>
+        </div>
+    </body>
+
+</html>

@@ -114,6 +114,9 @@ input:-moz-placeholder { color: #bfc7cc; }
     -webkit-align-items: center;
     justify-content: center;
     -webkit-justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 .toplist1{
       margin-top: 2rem;
@@ -128,6 +131,41 @@ input:-moz-placeholder { color: #bfc7cc; }
 .sec-list-num{
   color: #333b46;
   font-size: .32rem;
+}
+.sec-list-txt{
+  position: absolute;
+  z-index: 199;
+}
+.halfTop{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 2.4rem;
+    height: 1.2rem;
+    overflow: hidden;
+    transform-origin:100% 100%;
+}
+.halfRole{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color:#ffffff;
+  border-radius: 100%;
+}
+.topHaf{
+  top: -1.2rem;
+}
+.halfBtm{
+  position: absolute;
+  top:1.2rem;
+  left: 0;
+  width: 2.4rem;
+  height: 1.2rem;
+  overflow: hidden;
+  transform-origin:0 0;
+
 }
 .sec-menu-btn{
   width: 3.64rem;

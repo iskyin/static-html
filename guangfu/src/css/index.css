@@ -1,0 +1,60 @@
+
+.tit{
+  width: 100%;
+  height: .8rem;
+  background-color: #FAFAD2;
+  line-height: .8rem;
+  text-align: center;
+  margin: .2rem 0 0 0;
+
+}
+.list{
+  width: 100%;
+  margin: .1rem 0 0 0;
+  background-color: #fff;
+}
+.list_el{
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  border-bottom: 1px solid #e6e9ea;
+}
+.list_el_tit{
+  width: 3rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: right;
+  font-weight: bold;
+  color: #38acff;
+  font-size: .23rem;
+}
+.list_el_ipt{
+  width: 4.5rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.list_el_ipt input{
+  width: 4rem;
+  height: .8rem;
+  margin: .1rem 0 0 0;
+  border: none;
+  border-bottom: 1px solid #7aaef8;
+  display: block;
+  line-height: .8rem;
+  text-align: center;
+}
+.list_el_ipt span{
+  width: .5rem;
+  height: 1rem;
+  display: block;
+  line-height: 1.2rem;
+  text-align: center;
+  font-size: .23rem;
+  font-weight: bold;
+  color: #606060;
+}

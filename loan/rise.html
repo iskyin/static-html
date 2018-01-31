@@ -8,7 +8,7 @@
     <meta content="telephone=no,email=no" name="format-detection">
     <meta name="Copyright" content="贷款">
     <title>贷款</title>
-    <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/img/i/favicon.ico" type="image/x-icon">
     <script src="./src/js/jquery-3.3.1.min.js"></script>
     <script src="./src/js/rem.js"></script>
     <!-- 公共样式 -->
@@ -115,12 +115,28 @@
 
 <div class="sec-menu" >
     <div class="sec-list toplist1">
-        <p class="sec-list-tit">当前可借额度</p>
-        <p class="sec-list-num">50,000元</p>
+        <div class="halfTop">
+          <div class="halfRole"></div>
+        </div>
+        <div class="halfBtm">
+          <div class="halfRole topHaf"></div>
+        </div>
+        <div class="sec-list-txt">
+          <p class="sec-list-tit">当前可借额度</p>
+          <p class="sec-list-num linesNum">0元</p>
+        </div>
     </div>
     <div class="sec-list toplist2">
-        <p class="sec-list-tit">最高可借额度</p>
-        <p class="sec-list-num">50,000元</p>
+        <div class="halfTop">
+          <div class="halfRole"></div>
+        </div>
+        <div class="halfBtm">
+          <div class="halfRole topHaf"></div>
+        </div>
+        <div class="sec-list-txt">
+          <p class="sec-list-tit">最高可借额度</p>
+          <p class="sec-list-num linesMax">0元</p>
+        </div>
     </div>
     <div class="sec-menu-btn">
       立即去借款
@@ -128,10 +144,55 @@
 </div>
 
 <script type="text/javascript">
-    $(function(){
+  $(function(){
+
+    // 显示弹层时调用一下此方法 就会执行弹层涉及的动画
+    showToApply();
+
+    // 弹层涉及的动画
+    function showToApply(){
+        var isGo=true;
+        // 弧线
+        function addRotate(div,rot,max){
+          if(rot>=max){
+            if(isGo){
+              isGo=false;
+              var halfBtm=$(".halfBtm");
+              addRotate(halfBtm,0,90);
+            }
+            return;
+          }
+          rot=rot+2;
+          div.css({"transform":"rotate("+rot+"deg)"})
+          div.css({"-webkit-transform":"rotate("+rot+"deg)"})
+          setTimeout(function() {
+            addRotate(div,rot,max)
+          },5);
+        }
+        var halfTop=$(".halfTop");
+        addRotate(halfTop,0,90);
 
 
-    })
+
+        // 数字
+        function addNum(div,start,end,space,str,fw){
+          if(start>=end){
+            return;
+          }
+          start=start+space;
+          div.html(start+str);
+          setTimeout(function() {
+            addNum(div,start,end,space,str,fw)
+          },fw);
+        }
+
+        var linesNum =$(".linesNum");
+        addNum(linesNum,2,50,2,',000',20)
+        var linesMax=$(".linesMax");
+        addNum(linesMax,10,500,10,',000',10)
+    }
+
+  })
 </script>
 </body>
 </html>

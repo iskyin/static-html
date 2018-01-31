@@ -1,14 +1,22 @@
 .banner{
   width: 100%;
   height: 2.8rem;
-  background: url(../img/bar.png) no-repeat center center;
-  background-size: 100% 100%;
   display: flex;
   display: -webkit-flex;
   justify-content: row;
   -webkit-justify-content:row;
+  position: relative;
+}
+.bannerImg img{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .banner-addr{
+  position:absolute;
+  top: 0;
+  left:0;
+  z-index: 999;
   padding:0  .2rem ;
   height: .4rem;
   border-radius: .2rem;
